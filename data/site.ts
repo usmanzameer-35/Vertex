@@ -19,3 +19,13 @@ export const solutionDetails: Record<string, { eyebrow: string; title: string; d
   "equipment-specialist-services": { eyebrow: "06 / Coordination model", title: "The right resource for the defined scope.", description: "Where specialist execution or equipment is required, Vertex can coordinate appropriate third-party providers against an agreed requirement. Ownership and execution responsibility are confirmed in the commercial scope.", items: ["Equipment sourcing and rental resources", "Inspection and maintenance providers", "Specialist personnel coordination", "Technical service and logistics resources", "Closeout and handover coordination"] },
   "facilities-technology": { eyebrow: "07 / Secondary capability", title: "Facilities and technology, kept practical.", description: "A secondary division for commercial, institutional and industrial facility requirements, coordinated without losing sight of the underlying specification.", items: ["CCTV and surveillance systems", "Access control and attendance systems", "Structured cabling, LAN and Wi-Fi", "Workstations and business IT hardware", "HVAC, ventilation and facility maintenance"] },
 }
+
+export const solutionImages: Record<string, string> = {
+  "technical-procurement": "/technical-procurement.png",
+  "oil-gas-support": "/oil-gas-field.png",
+  "industrial-mro": "/industrial-mro.png",
+  "electrical-instrumentation": "/instrumentation.png",
+  "hse-site-supply": "/hse-safety.png",
+  "equipment-specialist-services": "/equipment-coordination.png",
+  "facilities-technology": "/instrumentation.png",
+}

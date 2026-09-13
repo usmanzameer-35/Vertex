@@ -25,6 +25,8 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
+  useEffect(() => { document.body.style.overflow = open ? "hidden" : ""; return () => { document.body.style.overflow = "" } }, [open])
+
   return (
     <header className={`fixed inset-x-0 top-0 z-50 border-b transition-colors duration-300 ${scrolled || open ? "border-border/70 bg-background/95 backdrop-blur-xl" : "border-white/20 bg-ink/35 backdrop-blur-sm"}`}>
       <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 lg:px-8">
@@ -61,20 +63,21 @@ export function SiteHeader() {
           className="border border-white/30 p-2 text-white lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           {open ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
       </div>
 
       {open && (
-        <nav className="border-t border-border/60 bg-background px-5 py-6 lg:hidden" aria-label="Mobile navigation">
+        <nav id="mobile-navigation" className="mobile-menu min-h-[calc(100svh-76px)] border-t border-border/60 bg-background px-5 py-8 lg:hidden" aria-label="Mobile navigation">
           <div className="flex flex-col gap-4">
             {links.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="text-sm text-muted transition-colors hover:text-foreground"
+                className="border-b border-border/60 pb-4 font-display text-2xl text-foreground transition-colors hover:text-accent"
               >
                 {l.label}
               </Link>
