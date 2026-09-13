@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google"
 import "./globals.css"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { siteUrl } from "@/data/site-url"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,6 +18,7 @@ const grotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Vertex Energy & Industrial Solutions | Technical Procurement & Field Support",
   description:
     "A field-informed business platform connecting technical requirements with reliable sourcing, specialist coordination and accountable delivery. Technical procurement, industrial supply and field support across Pakistan.",
@@ -29,6 +31,7 @@ export const metadata: Metadata = {
     "Pakistan",
   ],
   openGraph: {
+    url: siteUrl,
     title: "Vertex Energy & Industrial Solutions",
     description:
       "Technical requirements. Reliable sourcing. Accountable delivery.",
