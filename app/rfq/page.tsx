@@ -1,0 +1,4 @@
+import { SectionLabel } from "@/components/overview"
+import { RFQForm } from "@/components/rfq-form"
+export const metadata = { title: "Send an RFQ" }
+export default function RFQPage() { return <section className="border-t border-border/60 bg-background"><div className="mx-auto max-w-6xl px-5 py-24"><SectionLabel>RFQ portal</SectionLabel><div className="mt-5 grid gap-12 lg:grid-cols-[.75fr_1.25fr] lg:items-start"><div><h1 className="max-w-xl font-display text-5xl font-bold tracking-tight text-foreground">Send the requirement as it exists.</h1><p className="mt-5 max-w-md text-base leading-7 text-muted">Include technical detail, quantities, location, documentation needs and required date where available.</p><p className="mt-8 border-l-2 border-accent/60 pl-4 text-sm leading-6 text-muted">This endpoint validates the payload but does not claim to send email or CRM submissions until an integration is configured.</p></div><RFQForm /></div></div></section> }
