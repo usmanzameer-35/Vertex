@@ -23,7 +23,7 @@ const markets = [
   },
   {
     no: "05",
-    title: "Commercial & Warehousing",
+    title: "Commercial & Institutional",
     desc: "Facilities, technology and maintenance requirements.",
   },
   {
