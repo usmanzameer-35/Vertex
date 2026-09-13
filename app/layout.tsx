@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next"
 import { Inter, Space_Grotesk } from "next/font/google"
 import "./globals.css"
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -47,7 +49,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${grotesk.variable}`}>
-      <body>{children}</body>
+      <body><SiteHeader />{children}<SiteFooter /></body>
     </html>
   )
 }
