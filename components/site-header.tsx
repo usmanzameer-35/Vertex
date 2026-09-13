@@ -4,10 +4,10 @@ import { useState } from "react"
 import { Menu, X } from "lucide-react"
 
 const links = [
-  { href: "#services", label: "Services" },
-  { href: "#markets", label: "Markets" },
-  { href: "#process", label: "Process" },
-  { href: "#leadership", label: "Leadership" },
+  { href: "/solutions", label: "Solutions" },
+  { href: "/industries", label: "Industries" },
+  { href: "/how-we-work", label: "How we work" },
+  { href: "/leadership/babar-ali-malik", label: "Leadership" },
 ]
 
 export function SiteHeader() {
@@ -36,10 +36,10 @@ export function SiteHeader() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/rfq"
             className="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-background transition-colors hover:bg-accent-soft"
           >
-            Send a requirement
+            Send an RFQ
           </a>
         </nav>
 
@@ -68,11 +68,11 @@ export function SiteHeader() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/rfq"
               onClick={() => setOpen(false)}
               className="rounded-full bg-accent px-4 py-2 text-center text-sm font-semibold text-background"
             >
-              Send a requirement
+              Send an RFQ
             </a>
           </div>
         </nav>
